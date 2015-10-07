@@ -1,9 +1,9 @@
 FROM tutum/apache-php 
-ADD revive-adserver-3.0.5.zip /tmp/ 
+ADD revive-adserver-3.2.2.zip /tmp/ 
 WORKDIR /tmp/
 RUN apt-get install -y unzip
-RUN unzip revive-adserver-3.0.5
-RUN rm -rf /app && mkdir /app && mv revive-adserver-3.0.5/* /app/
+RUN unzip revive-adserver-3.2.2
+RUN rm -rf /app && mkdir /app && mv revive-adserver-3.2.2/* /app/
 RUN chmod -R a+w /app/var
 RUN chmod -R a+w /app/var/cache
 RUN chmod -R a+w /app/var/plugins
